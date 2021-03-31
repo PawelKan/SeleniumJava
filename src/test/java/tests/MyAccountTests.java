@@ -1,10 +1,7 @@
 package tests;
 
 import drivers.DriverUtils;
-import helpers.LoggerTool;
-import helpers.TestData;
-import helpers.Urls;
-import helpers.ListenerHelper;
+import helpers.*;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pageObjects.LoginPage;
@@ -53,5 +50,6 @@ public class MyAccountTests extends TestBase{
 
         LoggerTool.logInfo("TEST STEP: Verify - second address is not visible");
         addNewAddressSection.verifySecondAddressIsNotVisible();
+        Screenshooter.createScreenshoot("loginIntoAppVerifyMyAccountAddNewAddressAndDeleteIt");
     }
 }
